@@ -1,0 +1,122 @@
+#bko-mobile-menu {
+  $mobile-background: #1d1d1d;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  &.is-active {
+    display: block;
+    .menu {
+      display: block;
+    }
+  }
+  .menu {
+    min-width: 250px;
+    width: 350px;
+    height: 100%;
+
+    display: none;
+    transform: translateX(-100%);
+    transition: transform 0.25s linear;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .menu-header {
+      width: 100%;
+      padding: 1rem;
+      background-color: lighten($mobile-background, 15%) !important;
+    }
+    .navbar-menu,
+    .navbar-start,
+    .navbar-end {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      width: 100%;
+      .nested.dropdown.dropdown-menu {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .navbar-start {
+      margin-right: 0;
+    }
+    .navbar-end {
+      margin-left: 0;
+    }
+    .navbar-menu {
+      a {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  #bko-mobile-menu {
+    .menu,
+    .navbar-menu,
+    .navbar-start,
+    .navbar-end {
+      background-color: $primary-black;
+      .is-active {
+        background-color: lighten($primary-black, 2%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .no-scroll-on-filter-mobile-open {
+    overflow: hidden;
+  }
+  .video-container {
+    display: none;
+  }
+  #main {
+    .block {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      .columns {
+        max-height: inherit;
+      }
+      &:nth-child(odd) {
+        .columns {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+      .content-block {
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+  #guide-filters {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #191919;
+    z-index: 1000;
+    .close {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      width: 100%;
+      color: #fff;
+      background-color: #0f0f0f;
+    }
+  }
+}

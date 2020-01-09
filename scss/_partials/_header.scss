@@ -1,0 +1,15 @@
+/* BLACKOUT V1 THEME NAVIGATION BAR / HEADER */
+#bko-head {
+  height: 80px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  .navbar-brand {
+    padding-left: 10px;
+  }
+  .navbar-item {
+    a {
+      color: #fff;
+    }
+  }
+}

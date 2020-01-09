@@ -1,0 +1,25 @@
+#guide-columns {
+  div:first-child {
+    transition: width 0.25s linear;
+  }
+}
+
+.card {
+  .card-image {
+    .card-text {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .card-content {
+    min-height: 150px;
+  }
+}

@@ -1,0 +1,49 @@
+/* BLACKOUT THEME FRONT-PAGE.PHP */
+.video-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+#main {
+  padding: 7rem 0;
+  .block {
+    background-color: #424242;
+    width: 100%;
+    padding: 2rem;
+    .columns {
+      overflow: visible;
+      max-height: 250px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 10rem;
+    }
+    &:nth-child(odd) {
+      background-color: #000;
+      .image-block {
+        text-align: right;
+        justify-content: flex-end;
+      }
+      .content-block {
+        text-align: left;
+      }
+    }
+    .image-block {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      width: auto;
+      flex: 1 0 0;
+    }
+    .content-block {
+      flex-shrink: 1;
+      flex-grow: 0;
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      text-align: right;
+    }
+  }
+}

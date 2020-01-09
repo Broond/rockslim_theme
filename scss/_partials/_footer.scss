@@ -1,0 +1,31 @@
+.footer {
+  background-color: $primary-black;
+  padding: 0;
+  .footer-content {
+    padding: 3rem 1.5rem 6rem;
+  }
+  .sub-footer {
+    border-top: 1px solid #333;
+    display: flex;
+    background-color: darken(#191919, 5%);
+    padding: 0.25rem 1rem;
+    align-items: center;
+    .policy {
+      flex: 1;
+    }
+    .social-icons {
+      display: flex;
+      span {
+        padding: 0 0.25rem;
+        .twitch {
+          display: block;
+          width: 29px;
+        }
+        .social-icon {
+          display: block;
+          width: 32px;
+        }
+      }
+    }
+  }
+}

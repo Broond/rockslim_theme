@@ -1,0 +1,94 @@
+#guide-filters {
+  $tag-content-background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  .close {
+    display: none;
+  }
+  .filter-field {
+    margin-bottom: 1.5rem;
+    .filter-options {
+      display: flex;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      .button-left,
+      .button-right {
+        flex: 1;
+        .bko-button {
+          box-shadow: none;
+          padding: 0.75rem;
+          &.is-active {
+            background-color: lighten(#0f0f0f, 2%);
+          }
+        }
+      }
+      .button-right {
+        .bko-button {
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+        }
+      }
+      .button-left {
+        .bko-button {
+          border-bottom-right-radius: 0;
+          border-top-right-radius: 0;
+        }
+      }
+    }
+    .bko-button {
+      width: 100%;
+      background-color: #0f0f0f;
+      color: #555;
+      border: 0;
+      box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      transition: background-color 0.5 linear;
+      &:hover {
+        background-color: lighten(#0f0f0f, 5%);
+      }
+    }
+    padding: 0 0.75rem;
+    .dropdown,
+    .dropdown-trigger,
+    .dropdown-trigger > button {
+      width: 100%;
+      background-color: lighten($nav-color-scheme, 5%);
+      color: #fff;
+      border-color: $nav-color-scheme;
+    }
+    .guides-checkbox-wrap {
+      padding: 0.25rem 0.5rem;
+    }
+  }
+  .guides-category-menu {
+    box-shadow: 1px 5px 10px rgba(00, 00, 00, 0.5);
+
+    border-radius: 4px;
+    .guides-category-head,
+    .guides-category-content {
+      padding: 1rem 0.75rem;
+    }
+    .guides-category-head {
+      background-color: lighten($tag-content-background-color, 2%);
+      border-top-width: 4px;
+    }
+    .guides-category-content {
+      background-color: $tag-content-background-color;
+      border-bottom-width: 4px;
+      .guides-checkbox-wrap {
+        color: #555;
+        padding: 0.25rem 0;
+      }
+    }
+  }
+}
+
+#guide-list {
+  .guide-list-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    nav {
+      flex: 1;
+    }
+  }
+}

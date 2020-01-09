@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "friz regular";
+  src: url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_regular-webfont.woff) format("woff2"),
+    url(hhttp://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_regular-webfont.woff2) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "friz bold";
+  src: url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_bold_bt-webfont.woff) format("woff2"),
+    url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_bold_bt-webfont.woff2) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unispace-Bold";
+  src: url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.woff") format("woff"),
+    url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.ttf") format("truetype"),
+    url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.svg#Unispace-Bold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  main {
+    flex: 1;
+    color: #444;
+    padding: 3rem 0;
+  }
+}
+
+.nested.dropdown {
+  &:hover > .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    top: 0;
+    margin-left: 100%;
+  }
+  button {
+    color: #fff;
+    background: none;
+    padding: 0px 0px;
+    border: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 2em;
+  }
+}
+
+.error404 {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .error-message-404 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 72px;
+      padding: 1rem;
+      color: #fff;
+      background-color: #0f0f0f;
+      border-radius: 4px;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

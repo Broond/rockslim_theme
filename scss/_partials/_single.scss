@@ -1,0 +1,22 @@
+.post-content {
+  padding: 0.5rem 1rem;
+  color: #4e4e4e;
+}
+
+.post-content,
+#author-info {
+  background-color: $primary-black;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#author-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 2px solid #fff;
+}
+
+.author-meta {
+  padding: 1rem 0 0 0;
+}
