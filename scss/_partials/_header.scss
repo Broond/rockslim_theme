@@ -1,4 +1,11 @@
 /* BLACKOUT V1 THEME NAVIGATION BAR / HEADER */
+#social {
+  background-color: $primary-black;
+  padding: 0 0.75rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 #bko-head {
   height: 80px;
   text-transform: uppercase;

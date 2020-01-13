@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import "wp-header";
 @import "variables";
 
 @import "../node_modules/bulma/sass/utilities/_all";
@@ -23,5 +23,7 @@
 @import "_partials/_guides";
 @import "_partials/_footer";
 @import "_partials/_mobile";
+
+@import "fonts";
 
 @import "override";

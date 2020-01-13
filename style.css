@@ -1,3 +1,16 @@
+/*
+Theme Name: Blackout Version 1
+Theme URI: https://www.blackoutgg.com
+Author: Blackout
+Author URI: https://www.blackoutgg.com
+Description: Twenty Seventeen brings your site to life with immersive featured images and subtle animations. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Blackout
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 @-webkit-keyframes spinAround {
   from {
@@ -11923,6 +11936,8 @@ blockquote.right {
   overflow: hidden;
   height: 300px;
   width: 100%;
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.8);
 }
 
 .parallax-container .parallax-text-wrapper {
@@ -11948,7 +11963,7 @@ blockquote.right {
 
 .parallax-container .parallax {
   position: absolute;
-  top: 0;
+  top: -300px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -12150,27 +12165,6 @@ blockquote.right {
           flex: 1;
 }
 
-@font-face {
-  font-family: "friz regular";
-  src: url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_regular-webfont.woff) format("woff2"), url(hhttp://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_regular-webfont.woff2) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "friz bold";
-  src: url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_bold_bt-webfont.woff) format("woff2"), url(http://localhost/wp-content/themes/blackout_v1/fonts/friz_quadrata_bold_bt-webfont.woff2) format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Unispace-Bold";
-  src: url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.eot?#iefix") format("embedded-opentype"), url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.woff") format("woff"), url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.ttf") format("truetype"), url("http://localhost/wp-content/themes/blackout_v1/fonts/Unispace-Bold/Unispace-Bold.svg#Unispace-Bold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 @-webkit-keyframes slide-in {
   0% {
     -webkit-transform: translateX(-100%);
@@ -12293,6 +12287,25 @@ blockquote.right {
   border-radius: 4px;
 }
 
+.social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-icons span {
+  padding: 0 0.25rem;
+}
+
+.social-icons span .twitch {
+  display: block;
+  width: 27px;
+}
+
+.social-icons span .social-icon img {
+  width: 28px;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   -webkit-transition: opacity 0.25s;
@@ -12305,6 +12318,18 @@ blockquote.right {
 }
 
 /* BLACKOUT V1 THEME NAVIGATION BAR / HEADER */
+#social {
+  background-color: #0a0a0a;
+  padding: 0 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 #bko-head {
   height: 80px;
   text-transform: uppercase;
@@ -12329,6 +12354,7 @@ blockquote.right {
           justify-content: center;
   width: 100%;
   height: auto;
+  position: relative;
 }
 
 #main {
@@ -12462,8 +12488,22 @@ blockquote.right {
   padding: 0;
 }
 
+.footer .justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer .footer-content {
   padding: 3rem 1.5rem 6rem;
+}
+
+.footer .footer-content .social {
+  text-align: center;
+}
+
+.footer .footer-content .social .icon:hover {
+  color: #4d4d4d;
 }
 
 .footer .sub-footer {
@@ -12482,26 +12522,6 @@ blockquote.right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-}
-
-.footer .sub-footer .social-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.footer .sub-footer .social-icons span {
-  padding: 0 0.25rem;
-}
-
-.footer .sub-footer .social-icons span .twitch {
-  display: block;
-  width: 29px;
-}
-
-.footer .sub-footer .social-icons span .social-icon {
-  display: block;
-  width: 32px;
 }
 
 #bko-mobile-menu {
@@ -12539,10 +12559,25 @@ blockquote.right {
   overflow-x: hidden;
 }
 
-#bko-mobile-menu .menu .menu-header {
-  width: 100%;
+#bko-mobile-menu .menu .nested.navbar-item.dropdown .dropdown-menu {
+  margin-left: 0;
+  display: block;
+  position: relative;
+}
+
+#bko-mobile-menu .menu .nested.navbar-item.dropdown .dropdown-menu .dropdown-content {
+  background: transparent;
+}
+
+#bko-mobile-menu .menu .menu-header .close {
+  color: #fff;
   padding: 1rem;
-  background-color: #434343 !important;
+  background-color: #505050;
+  border-radius: 20px;
+  z-index: 1000;
+  top: 0;
+  right: 10px;
+  position: absolute;
 }
 
 #bko-mobile-menu .menu .navbar-menu,
@@ -12561,24 +12596,17 @@ blockquote.right {
   width: 100%;
 }
 
-#bko-mobile-menu .menu .navbar-menu .nested.dropdown.dropdown-menu,
-#bko-mobile-menu .menu .navbar-start .nested.dropdown.dropdown-menu,
-#bko-mobile-menu .menu .navbar-end .nested.dropdown.dropdown-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 #bko-mobile-menu .menu .navbar-start {
   margin-right: 0;
 }
 
 #bko-mobile-menu .menu .navbar-end {
   margin-left: 0;
+}
+
+#bko-mobile-menu .menu .navbar-menu {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 #bko-mobile-menu .menu .navbar-menu a {
@@ -12601,6 +12629,9 @@ blockquote.right {
 }
 
 @media screen and (max-width: 768px) {
+  .footer-content .container {
+    text-align: center;
+  }
   .no-scroll-on-filter-mobile-open {
     overflow: hidden;
   }
@@ -12636,7 +12667,7 @@ blockquote.right {
     height: 100%;
     overflow-y: scroll;
     background-color: #191919;
-    z-index: 1000;
+    z-index: 10000;
   }
   #guide-filters .close {
     display: -webkit-box;
@@ -12650,5 +12681,26 @@ blockquote.right {
     color: #fff;
     background-color: #0f0f0f;
   }
+}
+
+@font-face {
+  font-family: "friz regular";
+  src: url("fonts/friz_quadrata_regular-webfont.woff2") format("woff2"), url("fonts/friz_quadrata_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "friz bold";
+  src: url("fonts/friz_quadrata_bold_bt-webfont.woff") format("woff2"), url("fonts/friz_quadrata_bold_bt-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unispace-Bold";
+  src: url("fonts/Unispace-Bold/Unispace-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Unispace-Bold/Unispace-Bold.woff") format("woff"), url("fonts/Unispace-Bold/Unispace-Bold.ttf") format("truetype"), url("fonts/Unispace-Bold/Unispace-Bold.svg#Unispace-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */

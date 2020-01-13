@@ -13,8 +13,12 @@ $avatar_url = get_avatar_url($author_id, array("size" => 96));
         <div class="parallax">
             <?php
                 $featured_img_url = get_the_post_thumbnail_url("full");
+                if (has_post_thumbnail()) :
             ?>
             <img src="<?php echo $featured_img_url ?>" alt="">
+            <?php  else : ?>
+            <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/banners/banner.png">
+            <?php endif; ?>
         </div>
     </div>
     <main>
@@ -22,7 +26,9 @@ $avatar_url = get_avatar_url($author_id, array("size" => 96));
             <div class="columns">
                 <div class="column is-four-fifths">
                     <div class="post-content">
-                        <?php the_content(); ?>
+                        <div class="content">
+                            <?php the_content(); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="column is-one-fifth">

@@ -37,7 +37,7 @@
                     $output .= "<div class='".$liClasses."'>";
                     $output .= "\n<div class='dropdown-trigger'>";
                     $output .= "\n<button class='button' aria-haspop='true' aria-controls='dropdown-menu'>";
-                    $output .= "\n<span>".$item->title."</span>\n<span class='icon is-small'>";
+                    $output .= "\n<a href='".$item->url."'>".$item->title."</a>\n<span class='icon is-small'></span>";
                     $output .= "\n<i class='fas fa-chevron-right' aria-hidden='true'></i>";
                     $output .= "\n</button>";
                     $output .= "\n</div>";

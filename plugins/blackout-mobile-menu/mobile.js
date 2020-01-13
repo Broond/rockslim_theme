@@ -156,11 +156,19 @@
       );
     }
 
+    function toggleBurger() {
+      var burger = document.querySelector(".navbar-burger");
+      if (menuOpen) {
+        burger.classList.remove("is-active");
+      } else {
+        burger.classList.add("is-active");
+      }
+    }
+
     function checkOnResize() {
-      console.log("checking broswer width...");
       var width = getBrowserWidth();
-      console.log(width);
       if (width > 1024) {
+        toggleBurger();
         menuOpen = false;
         menu.classList.remove("is-active");
         menu.children[0].style.transform = null;
@@ -172,8 +180,11 @@
     var check = debounce(checkOnResize, 150);
 
     function toggleMobile(e) {
+      toggleBurger(e);
       if (menuOpen) return closeMobile(e);
+
       menuOpen = true;
+
       menu.classList.add("is-active");
 
       document.documentElement.style.overflow = "hidden";
@@ -196,6 +207,6 @@
     });
 
     /* clicking outside the menu container will close the menu */
-    menu.addEventListener("click", closeMobile, false);
+    menu.addEventListener("click", toggleMobile, false);
   });
 })(window, document);

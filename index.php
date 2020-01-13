@@ -5,14 +5,25 @@
         <div class="parallax-text-wrapper">
             <h1 class="title is-1 has-text-white"><?php the_title(); ?></h1>
         </div>
-        <div class="parallax"></div>
+        <div class="parallax">
+            <?php
+                $featured_img_url = get_the_post_thumbnail_url("full");
+                if (has_post_thumbnail()) :
+            ?>
+            <img src="<?php echo $featured_img_url ?>" alt="">
+            <?php  else : ?>
+            <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/banners/banner.png">
+            <?php endif; ?>
+        </div>
     </div>
-    <main style="padding-top: 3rem;">
+    <main>
         <div class="container">
-            <div class="content">
-                <?php the_content(); ?>
+            <div class="post-content">
+                <div class="content">
+                    <?php the_content(); ?>
+                </div>
             </div>
         </div>
+        <?php get_footer(); ?>
 </div>
 <?php endwhile; endif; ?>
-<?php get_footer(); ?>

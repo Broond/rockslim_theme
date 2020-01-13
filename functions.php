@@ -5,7 +5,7 @@
 Function: blackout_v1_setup
 Description: Does some inital wordpress theme setup.
 */
-if ( ! function_exists( 'blackout_v1_setup' )) :
+if ( ! function_exists( 'blackout_theme_setup' )) :
 
     function blackout_theme_setup() {
         require_once("navwalker.php");
@@ -20,7 +20,7 @@ if ( ! function_exists( 'blackout_v1_setup' )) :
     }
 endif;
 
-add_action('after_setup_theme', 'blackout_setup');
+add_action('after_setup_theme', 'blackout_theme_setup');
 
 
 function blackout_login_logo() { ?>
