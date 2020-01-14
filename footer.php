@@ -47,7 +47,7 @@ if (!is_front_page() || is_single() || is_category()) :
                         <a href="https://www.instagram.com/blackoutgming/" class="icon is-large">
                             <i class="fab fa-2x fa-instagram"></i>
                         </a>
-                        <a href="" class="icon is-large">
+                        <a href="https://www.youtube.com/channel/UCaW1Grafo2jwHlsB28VQZ6Q" class="icon is-large">
                             <i class="fab fa-2x fa-youtube"></i>
                         </a>
                     </div>
