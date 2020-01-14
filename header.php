@@ -14,7 +14,9 @@
     <nav id="bko-head" class="navbar is-black z-depth-2" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/280w_80h_sm.png" alt="">
+                <a href="<?php bloginfo('url') ?>">
+                    <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/280w_80h_sm.png" alt="">
+                </a>
                 <a role="button" class="navbar-burger toggle" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
