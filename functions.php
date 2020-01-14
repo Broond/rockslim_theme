@@ -92,7 +92,7 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 function load_scripts() {
     if (!is_front_page() || is_single() || is_singular()) {
-        wp_enqueue_script("rellax", get_template_directory_uri() . "/js/libs/rellax/rellax.min.js", array(), false, true);
+        wp_enqueue_script("rellax", get_template_directory_uri() . "/js/libs/rellax.min.js", array(), false, true);
     }
 }
 
