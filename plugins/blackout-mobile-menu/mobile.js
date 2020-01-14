@@ -206,7 +206,7 @@
       e.stopPropagation();
     });
 
-    /* clicking outside the menu container will close the menu */
     menu.addEventListener("click", toggleMobile, false);
+    /* clicking outside the menu container will close the menu */
   });
 })(window, document);

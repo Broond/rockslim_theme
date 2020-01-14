@@ -107,4 +107,7 @@ add_action("wp_enqueue_scripts", "load_scripts");
 // }
 
 // add_action("wp_enqueue_scripts", "include_jquery");
+
+/* DISABLE THE WP USER BAR */
+add_filter("show_admin_bar", "__return_false");
 ?>

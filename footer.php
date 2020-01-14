@@ -19,13 +19,15 @@ if (!is_front_page() || is_single() || is_category()) :
         <div class="container is-fluid">
             <div class="columns justify-center">
                 <div class="column is-4">
-                    <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/280w_80h_sm.png" alt="">
-                    <p>WHO WE ARE</p>
-                    <p>Blackout Gaming is a collective of like minded players that primarily play and enjoy the PvP
-                        (player vs. player) content of video games. Our objective is both to excel at whatever game we
-                        play and provide
-                        content in
-                        the form of entertainment and valuable information to the masses.</p>
+                    <div class="content">
+                        <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/280w_80h_sm.png" alt="">
+                        <p>Blackout Gaming is a collective of like minded players that primarily play and enjoy the PvP
+                            (player vs. player) content of video games. Our objective is both to excel at whatever game
+                            we
+                            play and provide
+                            content in
+                            the form of entertainment and valuable information to the masses.</p>
+                    </div>
                 </div>
                 <div class="column is-4 is-offset-2">
                     <div class="links">
@@ -36,18 +38,18 @@ if (!is_front_page() || is_single() || is_category()) :
                 <div class="column-is-4 is-offset">
                     <div class="social">
                         <p>FOLLOW US</p>
-                        <span class="icon is-large">
+                        <a href="http://twitter.com/BlackoutGmingGG" class="icon is-large">
                             <i class="fab fa-2x fa-twitter"></i>
-                        </span>
-                        <span class="icon is-large">
+                        </a>
+                        <a href="https://www.twitch.tv/blackoutgaminggg" class="icon is-large">
                             <i class="fab fa-2x fa-twitch"></i>
-                        </span>
-                        <span class="icon is-large">
+                        </a>
+                        <a href="https://www.instagram.com/blackoutgming/" class="icon is-large">
                             <i class="fab fa-2x fa-instagram"></i>
-                        </span>
-                        <span class="icon is-large">
+                        </a>
+                        <a href="" class="icon is-large">
                             <i class="fab fa-2x fa-youtube"></i>
-                        </span>
+                        </a>
                     </div>
                 </div>
             </div>
