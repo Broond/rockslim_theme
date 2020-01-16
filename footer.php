@@ -1,3 +1,13 @@
+<?php
+if (!is_user_logged_in()) :
+    /* Check to see if the plugin is active */
+    if (function_exists("setup_blackout_mobile_menu")) {
+        $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
+        include_once($templates . "/modal.php");
+    }
+    
+endif;
+?>
 <?php wp_footer(); ?>
 <?php
 if (!is_front_page() || is_single() || is_category()) :
@@ -27,6 +37,7 @@ if (!is_front_page() || is_single() || is_category()) :
                             play and provide
                             content in
                             the form of entertainment and valuable information to the masses.</p>
+                        <p>New World is trademark of Amazon and Amazon Game Studios.</p>
                     </div>
                 </div>
                 <div class="column is-4 is-offset-2">
@@ -35,7 +46,7 @@ if (!is_front_page() || is_single() || is_category()) :
                         <?php wp_nav_menu(array( "theme_location" => "primary", "depth" => 1)); ?>
                     </div>
                 </div>
-                <div class="column-is-4 is-offset">
+                <div class="column is-narrow">
                     <div class="social">
                         <p>FOLLOW US</p>
                         <a href="http://twitter.com/BlackoutGmingGG" class="icon is-large">
@@ -58,13 +69,14 @@ if (!is_front_page() || is_single() || is_category()) :
     <div class="sub-footer">
         <div class="container is-fluid">
             <div class="content">
-                <a href="">Privacy Policy</a>
+                <a href="<?php bloginfo('url') ?>/privacy">Privacy Policy</a>
                 <span>&#8226;</span>
-                <a href="">Terms of Service</a>
+                <a href="<?php bloginfo('url')?>/terms-of-use">Terms of Use</a>
             </div>
         </div>
     </div>
 </footer>
+
 </body>
 
 </html>

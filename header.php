@@ -40,41 +40,17 @@
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a href="/wp-login.php" class="button is-outlined is-dark" role="button">Sign In</a>
+                            <!-- <a href="/wp-login.php" class="button is-outlined is-dark" role="button">Sign In</a> -->
+                            <a class="button is-outlined is-dark auth" role="button" data-action="login">Sign In</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
-    <nav id="bko-mobile-menu">
-        <div class="menu">
-            <div class="menu-header">
-                <span class="close toggle"></span>
-                <figure class="image is-2by1">
-                    <img src="" alt="">
-                </figure>
-            </div>
-            <div class="navbar-menu">
-                <?php
-                  wp_nav_menu( array( 
-                    'theme_location' => 'primary',
-                    'depth' => 0,
-                    'items_wrap' => '<div class="navbar-start">%3$s</div>',
-                    'container' => false,
-                    'menu_class' => 'navbar-start',
-                    'menu_id' => '',
-                    'after' => '</div>',
-                    'walker' => new Navwalker()
-                  ));
-                ?>
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a href="/wp-login.php" class="button is-outlined is-dark" role="button">Sign In</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <?php
+        if (function_exists("setup_blackout_mobile_menu")) :
+            $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
+            include_once($templates . "/mobile.php");
+        endif;
+    ?>
