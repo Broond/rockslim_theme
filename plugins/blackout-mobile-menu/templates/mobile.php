@@ -1,7 +1,7 @@
 <nav id="bko-mobile-menu">
     <div class="menu">
         <div class="menu-header">
-            <span class="close toggle"></span>
+            <span class="delete close toggle"></span>
             <figure class="image is-2by1">
                 <img src="" alt="">
             </figure>
