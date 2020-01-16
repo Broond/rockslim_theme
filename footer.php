@@ -9,21 +9,6 @@ if (!is_user_logged_in()) :
 endif;
 ?>
 <?php wp_footer(); ?>
-<?php
-if (!is_front_page() || is_single() || is_category()) :
-?>
-<script>
-(function() {
-    new Rellax(".parallax > img", {
-        center: true,
-        wrapper: null,
-        vertical: true,
-        horizontal: false,
-        speed: -9
-    });
-})();
-</script>
-<? endif; ?>
 <footer class="footer is-black">
     <div class="footer-content">
         <div class="container is-fluid">
