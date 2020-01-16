@@ -12545,8 +12545,7 @@ blockquote.right {
 }
 
 #bko-mobile-menu .menu {
-  min-width: 250px;
-  width: 350px;
+  max-width: 350px;
   height: 100%;
   display: none;
   -webkit-transform: translateX(-100%);
