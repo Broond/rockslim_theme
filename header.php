@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -37,13 +39,32 @@
                     'walker' => new Navwalker()
                   ));
                 ?>
-                <div class="navbar-end">
+                <div id="desktop-user" class="navbar-end">
+                    <?php if (!is_user_logged_in()) :?>
                     <div class="navbar-item">
                         <div class="buttons">
-                            <!-- <a href="/wp-login.php" class="button is-outlined is-dark" role="button">Sign In</a> -->
-                            <a class="button is-outlined is-dark auth" role="button" data-action="login">Sign In</a>
+                            <?php 
+                            if (get_option("users_can_register") && function_exists("setup_blackout_mobile_menu")) :
+                            ?>
+                            <a class="button is-outlined is-dark auth" role="button" data-action="register">
+                                <span class="button-content">
+                                    <i class="fas fa-user-circle"></i>
+                                    <span class="auth-label"> Sign Up</span>
+                                </span>
+                            </a>
+                            <? endif; ?>
+                            <a class="button is-outlined is-dark auth" role="button" data-action="login">
+                                <span class="button-content">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    <span class="auth-label"> Sign In</span>
+                                </span>
+                            </a>
                         </div>
                     </div>
+                    <?php else: 
+                       include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates/user-panel.php");
+                        endif; 
+                    ?>
                 </div>
             </div>
         </div>

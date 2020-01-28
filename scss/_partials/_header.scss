@@ -1,14 +1,7 @@
 /* BLACKOUT V1 THEME NAVIGATION BAR / HEADER */
-#social {
-  background-color: $primary-black;
-  padding: 0 0.75rem;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 #bko-head {
   height: 80px;
-  text-transform: uppercase;
+
   font-weight: 500;
 
   .navbar-brand {
@@ -17,6 +10,14 @@
   .navbar-item {
     a {
       color: #fff;
+    }
+  }
+  .navbar-start {
+    text-transform: uppercase;
+  }
+  .navbar-end {
+    .auth-label {
+      padding-left: 5px;
     }
   }
 }

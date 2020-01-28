@@ -1,0 +1,23 @@
+.field {
+  position: relative;
+  .pristine-error {
+    position: absolute;
+    z-index: 1;
+    padding: 0.25rem;
+    background-color: #ff6961;
+    color: #fff;
+    font-size: 12px;
+    box-shadow: 0px 2px 2px rgba(55, 55, 55, 0.5);
+    &:before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #ff6961;
+      position: absolute;
+      left: 10px;
+      top: -9px;
+    }
+  }
+}

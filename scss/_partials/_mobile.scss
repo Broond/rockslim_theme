@@ -23,14 +23,14 @@
     transition: transform 0.25s linear;
     overflow-y: auto;
     overflow-x: hidden;
-    .nested.navbar-item.dropdown {
-      .dropdown-menu {
-        margin-left: 0;
-        display: block;
-        position: relative;
-        .dropdown-content {
-          background: transparent;
+    .navbar-item.has-dropdown {
+      .navbar-item.has-dropdown {
+        .navbar-link {
+          padding-left: 0;
         }
+      }
+      .navbar-dropdown {
+        display: none;
       }
     }
     .menu-header {
@@ -40,7 +40,7 @@
         background-color: lighten($mobile-background, 20%);
         border-radius: 20px;
         z-index: 1000;
-        top: 0;
+        top: 10px;
         right: 10px;
         position: absolute;
       }

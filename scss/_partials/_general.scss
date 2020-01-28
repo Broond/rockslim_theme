@@ -68,17 +68,33 @@
   }
 }
 
-.social-icons {
-  display: flex;
-  span {
-    padding: 0 0.25rem;
-    .twitch {
-      display: block;
-      width: 27px;
+.user {
+  .navbar-user-details {
+    display: flex;
+    .navbar-username {
+      padding-left: 10px;
     }
-    .social-icon {
-      img {
-        width: 28px;
+  }
+  .navbar-dropdown {
+    .navbar-item > span:last-child {
+      padding-left: 20px;
+    }
+  }
+}
+
+#authentication {
+  z-index: 10000;
+  #login,
+  #register {
+    .modal-card-body {
+      position: relative;
+      .is-loading {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
       }
     }
   }

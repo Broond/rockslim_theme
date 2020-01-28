@@ -2,7 +2,8 @@
 $family-primary: "Roboto", sans-serif;
 $nav-color-scheme: #1d1d1d;
 $primary-black: #0a0a0a;
-$secondary-black: lighten(#0f0f0f, 15%);
+$secondary-black: #0f0f0f;
+// $secondary-black: lighten(#0f0f0f, 15%);
 $link: darken(#fff, 35%);
 // changes <html> background color.
 $body-background-color: #121212;
@@ -22,3 +23,9 @@ $card-footer-border-top: 1px solid #555;
 
 $dropdown-content-background-color: lighten($nav-color-scheme, 5%);
 $dropdown-item-color: #fff;
+
+$modal-content-width: 800px;
+$modal-card-head-background-color: $secondary-black;
+$modal-card-head-border-bottom: none;
+$modal-card-title-color: #fff;
+$modal-card-body-background-color: $primary-black;
