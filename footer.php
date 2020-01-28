@@ -2,7 +2,7 @@
 if (!is_user_logged_in()) :
     /* Check to see if the plugin is active */
     if (function_exists("setup_blackout_mobile_menu")) {
-        $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
+        $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-auth/templates";
         include_once($templates . "/modal.php");
     }
     
