@@ -136,4 +136,12 @@
       background-color: #0f0f0f;
     }
   }
+  #histories {
+    .history-text {
+      .history-text-head {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
 }

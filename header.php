@@ -7,7 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <?php if (is_front_page() || is_home()) : ?>
+    <title><?php bloginfo('name'); ?></title>
+    <?php else: ?>
+    <title><?php wp_title(); ?></title>
+    <? endif; ?>
     <?php wp_head(); ?>
 
 </head>
@@ -26,7 +30,6 @@
                 </a>
             </div>
             <div class="navbar-menu">
-                <? // GENERATE THE NAVIGATION BAR ?>
                 <?php
                   wp_nav_menu( array( 
                     'theme_location' => 'primary',
@@ -61,9 +64,10 @@
                             </a>
                         </div>
                     </div>
-                    <?php else: 
-                       include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-auth/templates/user-panel.php");
-                        endif; 
+                    <?php 
+                     else :
+                       include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates/user-panel.php");
+                     endif; 
                     ?>
                 </div>
             </div>
@@ -71,7 +75,7 @@
     </nav>
     <?php
         if (function_exists("setup_blackout_mobile_menu")) :
-            $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-auth/templates";
+            $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
             include_once($templates . "/mobile.php");
         endif;
     ?>

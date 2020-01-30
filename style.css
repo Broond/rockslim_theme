@@ -12192,24 +12192,43 @@ blockquote.right {
   top: -9px;
 }
 
-.is-collapsible {
-  height: 0;
-  overflow-y: hidden;
-  -webkit-transition: height 0.2s ease;
-  transition: height 0.2s ease;
+#histories .history {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  background-color: #0a0a0a;
+  -webkit-box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
+  height: 100%;
 }
 
-.is-collapsible.is-active {
-  -webkit-transition: height 0.2s ease;
-  transition: height 0.2s ease;
+#histories .history .history-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.is-collapsible.message-body {
-  padding: 0 !important;
+#histories .history .history-text {
+  padding: 0.75rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-.is-collapsible.message-body .message-body-content {
-  padding: 1.25em 1.5em;
+#histories .history .history-text .history-text-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#histories .history .history-text .history-text-head .history-text-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 @-webkit-keyframes slide-in {
@@ -12346,6 +12365,44 @@ blockquote.right {
 
 .user .navbar-dropdown .navbar-item > span:last-child {
   padding-left: 20px;
+}
+
+.section-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0;
+}
+
+.section-head .section-head-text {
+  padding: 0 1rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 7px;
+}
+
+.section-head .line {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 0px;
+          flex: 3 1 0;
+  height: 10px;
+  width: 100%;
+  background-color: #0a0a0a;
 }
 
 #authentication {
@@ -12733,6 +12790,15 @@ blockquote.right {
     width: 100%;
     color: #fff;
     background-color: #0f0f0f;
+  }
+  #histories .history-text .history-text-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 

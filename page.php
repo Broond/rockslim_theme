@@ -7,10 +7,10 @@
         </div>
         <div class="parallax">
             <?php
-                $featured_img_url = get_the_post_thumbnail_url("full");
+                $featured_img_url = get_the_post_thumbnail_url(get_the_ID(), "full");
                 if (has_post_thumbnail()) :
             ?>
-            <img src="<?php echo $featured_img_url ?>" alt="">
+            <img src="<?php echo esc_url($featured_img_url) ?>" alt="">
             <?php  else : ?>
             <img src="https://blackout-gaming.s3.amazonaws.com/Images/assets/banners/banner.png">
             <?php endif; ?>

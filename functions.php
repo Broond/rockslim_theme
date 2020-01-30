@@ -93,8 +93,7 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 function load_scripts() {
     wp_enqueue_script("toast", "https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js", array("jquery"), false, false);
-    // wp_enqueue_script("grecaptcha", "https://www.google.com/recaptcha/api.js?render=explicit", array(), false, false);
-    if (!is_front_page() || is_single() || is_singular()) {
+    if (!is_front_page()) {
         wp_enqueue_script("rellax", get_template_directory_uri() . "/js/libs/rellax.min.js", array(), false, true);
         wp_enqueue_script("parallax", get_template_directory_uri() . "/js/parallax.js", array("rellax"), false, true);
     }
@@ -103,7 +102,6 @@ function load_scripts() {
 add_action("wp_enqueue_scripts", "load_scripts");
 
 
-/*----- UNCOMMENT THIS IF YOU WANT JQUERY -----*/
 function include_jquery() {
     wp_deregister_script("jquery");
     wp_register_script("jquery", get_template_directory_uri() . "/js/libs/jquery-3.4.1.min.js", array(), false, false);
@@ -111,6 +109,28 @@ function include_jquery() {
 }
 
 add_action("wp_enqueue_scripts", "include_jquery");
+
+function blackout_history_custom_post() {
+    $labels = array(
+        "menu_name" => __("Histories"),
+        "name" => __("History", "post type general name"),
+        "singular_name" => __("History", "post type singular name"),
+        "add_new" => __("Add new", "history"),
+        "edit_item" => __("Edit History"),
+        "view_item" => __("View History"),
+    );
+    $args = array(
+        "labels" => $labels,
+        "description" => "History blocks for our history page",
+        "public" => true,
+        "menu_position" => 5,
+        "has_archive" => false,
+        "supports" => array("title", "editor", "thumbnail", "excerpt")
+    );
+    register_post_type("history", $args);
+}
+
+add_action("init", "blackout_history_custom_post");
 
 /* DISABLE THE WP USER BAR */
 add_filter("show_admin_bar", "__return_false");

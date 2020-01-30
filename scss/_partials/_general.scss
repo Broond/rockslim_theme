@@ -82,6 +82,28 @@
   }
 }
 
+.section-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  .section-head-text {
+    padding: 0 1rem;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 7px;
+  }
+  .line {
+    flex: 3 1 0;
+    height: 10px;
+    width: 100%;
+    background-color: $primary-black;
+  }
+}
+
 #authentication {
   z-index: 10000;
   #login,
