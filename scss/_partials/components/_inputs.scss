@@ -1,5 +1,11 @@
 .field {
-  position: relative;
+  .control {
+    &.has-icons-right {
+      .icon {
+        pointer-events: auto;
+      }
+    }
+  }
   .pristine-error {
     position: absolute;
     z-index: 1;
@@ -18,6 +24,17 @@
       position: absolute;
       left: 10px;
       top: -9px;
+    }
+  }
+  .bko-input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: 2px solid grey;
+    background-color: $primary-black;
+    color: #eee;
+    &:focus {
+      outline: none;
     }
   }
 }

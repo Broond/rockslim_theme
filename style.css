@@ -12165,8 +12165,8 @@ blockquote.right {
           flex: 1;
 }
 
-.field {
-  position: relative;
+.field .control.has-icons-right .icon {
+  pointer-events: auto;
 }
 
 .field .pristine-error {
@@ -12190,6 +12190,19 @@ blockquote.right {
   position: absolute;
   left: 10px;
   top: -9px;
+}
+
+.field .bko-input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: 2px solid grey;
+  background-color: #0a0a0a;
+  color: #eee;
+}
+
+.field .bko-input:focus {
+  outline: none;
 }
 
 #histories .history {
@@ -12422,6 +12435,11 @@ blockquote.right {
   top: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 100;
+}
+
+.clickable {
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .fade-enter-active,

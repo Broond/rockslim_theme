@@ -122,6 +122,11 @@
   }
 }
 
+.clickable {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s;

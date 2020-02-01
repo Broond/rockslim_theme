@@ -66,7 +66,8 @@
                     </div>
                     <?php 
                      else :
-                       include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-auth/templates/user-panel.php");
+                    //    include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates/user-panel.php");
+                     include_once(BLACKOUT_TEMPLATES_USERPANEL);
                      endif; 
                     ?>
                 </div>
@@ -75,7 +76,8 @@
     </nav>
     <?php
         if (function_exists("setup_blackout_mobile_menu")) :
-            $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-auth/templates";
-            include_once($templates . "/mobile.php");
+            // $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
+            // include_once($templates . "/mobile.php");
+            include_once(BLACKOUT_TEMPLATES_MOBILEMENU);
         endif;
     ?>
