@@ -55,7 +55,7 @@
                                     <span class="auth-label"> Sign Up</span>
                                 </span>
                             </a>
-                            <? endif; ?>
+                            <?php endif; ?>
                             <a class="button is-outlined is-dark auth" role="button" data-action="login">
                                 <span class="button-content">
                                     <i class="fas fa-sign-in-alt"></i>
