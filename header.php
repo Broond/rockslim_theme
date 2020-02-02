@@ -74,7 +74,7 @@
         </div>
     </nav>
     <?php
-        if (function_exists("setup_blackout_mobile_menu")) :
+        if (function_exists("setup_blackout_mobile_menu")) {
             include_once(BLACKOUT_TEMPLATES_MOBILEMENU);
-        endif;
+        }
     ?>
