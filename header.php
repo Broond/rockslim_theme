@@ -47,7 +47,7 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <?php 
-                            if (get_option("users_can_register") && function_exists("setup_blackout_mobile_menu")) :
+                            if (get_option("users_can_register") && function_exists("setup_blackout_mobile_menu")):
                             ?>
                             <a class="button is-outlined is-dark auth" role="button" data-action="register">
                                 <span class="button-content">
@@ -65,8 +65,7 @@
                         </div>
                     </div>
                     <?php 
-                     else :
-                    //    include_once(WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates/user-panel.php");
+                     else:
                      include_once(BLACKOUT_TEMPLATES_USERPANEL);
                      endif; 
                     ?>
@@ -76,8 +75,6 @@
     </nav>
     <?php
         if (function_exists("setup_blackout_mobile_menu")) :
-            // $templates = WP_CONTENT_DIR . "/plugins/blackout-mobile-menu/templates";
-            // include_once($templates . "/mobile.php");
             include_once(BLACKOUT_TEMPLATES_MOBILEMENU);
         endif;
     ?>
