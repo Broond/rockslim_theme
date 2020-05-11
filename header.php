@@ -13,7 +13,6 @@
     <title><?php wp_title(); ?></title>
     <? endif; ?>
     <?php wp_head(); ?>
-
 </head>
 
 <body <?php body_class(); ?>>
@@ -31,16 +30,16 @@
             </div>
             <div class="navbar-menu">
                 <?php
-                  wp_nav_menu( array( 
-                    'theme_location' => 'primary',
-                    'depth' => 0,
-                    'items_wrap' => '<div class="navbar-start">%3$s</div>',
-                    'container' => false,
-                    'menu_class' => 'navbar-start',
-                    'menu_id' => '',
-                    'after' => '</div>',
-                    'walker' => new Navwalker()
-                  ));
+                    wp_nav_menu( array( 
+                        'theme_location' => 'primary',
+                        'depth' => 0,
+                        'items_wrap' => '<div class="navbar-start">%3$s</div>',
+                        'container' => false,
+                        'menu_class' => 'navbar-start',
+                        'menu_id' => '',
+                        'after' => '</div>',
+                        'walker' => new Navwalker()
+                    ));
                 ?>
                 <div id="desktop-user" class="navbar-end">
                     <?php if (!is_user_logged_in()) :?>
@@ -65,9 +64,9 @@
                         </div>
                     </div>
                     <?php 
-                     else:
-                     include_once(BLACKOUT_TEMPLATES_USERPANEL);
-                     endif; 
+                        else:
+                            include_once(BLACKOUT_TEMPLATES_USERPANEL);
+                        endif; 
                     ?>
                 </div>
             </div>
