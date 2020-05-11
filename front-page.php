@@ -2,7 +2,7 @@
 <div class="wrapper">
     <div class="video-container">
         <video id="header-video" width="100%" height="250" playsinline autoplay muted loop="">
-            <source src="https://blackout-gaming.s3.amazonaws.com/video/newworld.mp4" type="video/mp4">
+            <source src="https://blackout-gaming.s3.amazonaws.com/video/0001-0876.webm" type="video/mp4">
         </video>
     </div>
     <div id="main">
@@ -12,15 +12,14 @@
                     <div class="column is-4">
                         <div class="content-block">
                             <h1 class="is-size-4">ABOUT US</h1>
-                            <p>We are a group of hardcore PvPers that were at one point all enemies but have come
-                                together
-                                as one efficient and disciplined group. Our goal is not to be the biggest force on the
-                                battlefield, but to have the biggest impact.</p>
+                            <p>We are a group of hardcore PvPers that were at one point all enemies but have come 
+								together as one efficient and disciplined group. Our goal is to let our skill and 
+								coordination show through our victories on the battlefield.</p>
                         </div>
                     </div>
                     <div class="column is-8">
                         <div class="image-block">
-                            <img class="z-depth-2" src="https://blackout-gaming.s3.amazonaws.com/Images/webx/0203.png"
+                            <img class="z-depth-2" src="https://blackout-gaming.s3.amazonaws.com/Images/webx/bko-black.webp"
                                 alt="">
                         </div>
                     </div>
@@ -32,9 +31,11 @@
                 <div class="columns is-vcentered">
                     <div class="column is-8">
                         <div class="image-block">
-                            <img class="z-depth-2"
-                                src="https://blackout-gaming.s3.amazonaws.com/Images/webx/BlackoutGames700x363.webp"
-                                alt="">
+                            <a href="https://www.blackoutgg.com/content">
+								<img class="z-depth-5"
+									src="https://blackout-gaming.s3.amazonaws.com/Images/webx/games-black.webp"
+									alt="">
+							</a>
                         </div>
                     </div>
                     <div class="column is-4">
@@ -62,8 +63,11 @@
                     </div>
                     <div class="column is-8">
                         <div class="image-block">
-                            <img class="z-depth-2"
-                                src="https://blackout-gaming.s3.amazonaws.com/Images/webx/content.webp" alt="">
+							<a href="https://www.blackoutgg.com/content">
+								<img class="z-depth-2"
+									 src="https://blackout-gaming.s3.amazonaws.com/Images/webx/streams-black.webp"
+									 alt="">
+							</a>
                         </div>
                     </div>
                 </div>

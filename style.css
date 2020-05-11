@@ -1,5 +1,5 @@
 /*
-Theme Name: Blackout Version 1
+Theme Name: Rockslim's Test Theme
 Theme URI: https://www.blackoutgg.com
 Author: Blackout
 Author URI: https://www.blackoutgg.com
@@ -31,6 +31,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg);
   }
+}
+
+.mo_oauth_login_button_widget {
+    display: flex;
+    align-items: center;
+    border: 1px solid #222 !important;
+    padding: 0.75rem;
+}
+
+.mo_oauth_login_button_text_widget {
+margin: 0px !important;
+color: white !important;
+display: inline-block !important;
+font-size: 100% !important;
+line-height: 0px !important;
+padding: 0px !important;
+font-weight: 700 !important;
+padding-right: 10px;
+}
+
+.mo_oauth_login_button_icon_widget {
+color: white;
+height: 55px;
+font-size: 30px;
+padding: 0 10px;
+}
+
+.navbar-end {
+  align-items: center;
 }
 
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
@@ -385,7 +414,7 @@ pre {
 }
 
 body {
-  color: #4a4a4a;
+  color: #b8b8b8;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
@@ -924,7 +953,7 @@ table th {
 }
 
 a.has-text-white:hover, a.has-text-white:focus {
-  color: #e6e6e6 !important;
+  color: #757575 !important;
 }
 
 .has-background-white {
@@ -948,7 +977,7 @@ a.has-text-black:hover, a.has-text-black:focus {
 }
 
 a.has-text-light:hover, a.has-text-light:focus {
-  color: #dbdbdb !important;
+  color: #757575 !important;
 }
 
 .has-background-light {
@@ -6151,7 +6180,7 @@ button.dropdown-item {
 a.dropdown-item:hover,
 button.dropdown-item:hover {
   background-color: whitesmoke;
-  color: #0a0a0a;
+  color: #0a0a0a; !important
 }
 
 a.dropdown-item.is-active,
@@ -6863,7 +6892,7 @@ a.list-item {
 .navbar.is-white .navbar-brand .navbar-link:hover,
 .navbar.is-white .navbar-brand .navbar-link.is-active {
   background-color: #f2f2f2;
-  color: #0a0a0a;
+  color: #0a0a0a !important;
 }
 
 .navbar.is-white .navbar-brand .navbar-link::after {
@@ -12464,7 +12493,7 @@ blockquote.right {
 }
 
 #bko-head .navbar-item a {
-  color: #fff;
+  
 }
 
 #bko-head .navbar-start {

@@ -110,6 +110,20 @@ function include_jquery() {
 
 add_action("wp_enqueue_scripts", "include_jquery");
 
+function wpb_widgets_init() {
+ 
+    register_sidebar( array(
+        'name'          => 'Login Button',
+        'id'            => 'custom-header-widget',
+        'before_widget' => '<div class="Login">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="Login">',
+        'after_title'   => '</h2>',
+    ) );
+ 
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
+
 function blackout_history_custom_post() {
     $labels = array(
         "menu_name" => __("Histories"),
